@@ -2,33 +2,93 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Page de Leslie</title>
-    <link rel="stylesheet" href="Style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page de Leslie - Groupe 4</title>
+    <style>
+        /* --- VOTRE CSS EMBELLI --- */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0; padding: 0; line-height: 1.6;
+            background-color: #f4f7f6; color: #333;
+            display: flex; flex-direction: column; min-height: 100vh;
+        }
+        header {
+            background: linear-gradient(135deg, #6e8efb, #a777e3);
+            color: white; padding: 2rem; text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        nav { background: #fff; padding: 1rem; text-align: center; border-bottom: 1px solid #ddd; }
+        .nav-link {
+            display: inline-block; padding: 10px 20px;
+            background-color: #6e8efb; color: white;
+            text-decoration: none; border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+        .nav-link:hover { background-color: #a777e3; transform: scale(1.05); }
+        main { flex: 1; max-width: 800px; margin: 2rem auto; padding: 0 1rem; }
+        section {
+            background: white; padding: 2rem; margin-bottom: 1.5rem;
+            border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            border-left: 5px solid #6e8efb;
+            transition: transform 0.3s;
+        }
+        section:hover { transform: translateY(-5px); }
+        h2 { color: #6e8efb; margin-top: 0; }
+        footer { background: #333; color: white; text-align: center; padding: 1rem; margin-top: auto; }
+        .group-tag { font-weight: bold; text-transform: uppercase; letter-spacing: 1px; }
+    </style>
 </head>
 <body>
+
     <header>
-       <h1>Groupe N°4 - Leslie</h1>
+        <div class="group-tag">Groupe N°4</div>
+        <h1 id="main-title">Leslie</h1>
     </header>
 
     <nav>
-        <a href="index.html">Retour page principale</a>
+        <a href="index.html" class="nav-link">Retour page principale</a>
     </nav>
 
     <main>
         <section>
-            <h2>À propos de moi</h2>
-            <p>Bonjour ! Je suis Leslie, étudiante en informatique. J'aime résoudre des problèmes complexes et coder des interfaces web.</p>
+            <h2>🌟 À propos de moi</h2>
+            <p>Bonjour ! Je suis <strong>Leslie</strong>, étudiante en informatique à Keyce. Passionnée par le développement web.</p>
         </section>
 
         <section>
-            <h2>Ma contribution</h2>
-            <p>Dans ce projet de groupe, je me suis occupée de la page secondaire et du script JavaScript.</p>
+            <h2 id="contribution-title">💻 Ma contribution</h2>
+            <p>Dans ce projet collaboratif, j'ai réalisé la page secondaire et l'interactivité.</p>
+            <button id="btn-contact" style="padding: 10px; cursor: pointer; border-radius: 5px; border: none; background: #a777e3; color: white;">Cliquez ici</button>
         </section>
     </main>
 
     <footer>
-        <p>Copyright tous droits réservés Groupe N°4</p>
+        <p>Copyright © 2025 - Tous droits réservés <span class="group-tag">Groupe N°4</span></p>
     </footer>
-    <link rel="stylesheet" href="Style.css">
+
+    <script>
+        // Ce code s'exécute quand la page est chargée
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log("Le script de Leslie est activé !");
+
+            const bouton = document.getElementById('btn-contact');
+            
+            // Ajout d'une interaction sur le bouton
+            bouton.addEventListener('click', () => {
+                alert("Bravo ! Vous avez testé l'interactivité de la page de Leslie.");
+                bouton.textContent = "Merci !";
+                bouton.style.background = "#4CAF50";
+            });
+
+            // Petit effet sur le titre au survol
+            const titre = document.getElementById('main-title');
+            titre.addEventListener('mouseover', () => {
+                titre.style.color = '#ffd700'; // Change en doré
+            });
+            titre.addEventListener('mouseout', () => {
+                titre.style.color = 'white';
+            });
+        });
+    </script>
 </body>
 </html>
