@@ -1,0 +1,137 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f2f2f2;
+    padding: 15px;
+}
+
+/* Conteneur principal */
+.app {
+    max-width: 1200px;
+    margin: auto;
+    background-color: white;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    background-color: #5d9bd3;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Zone centrale */
+.main {
+    flex: 1;
+    display: flex;
+}
+
+/* Menu gauche */
+.sidebar {
+    width: 230px;
+    background-color: #5d9bd3;
+    padding: 20px 10px;
+}
+
+/* Boutons menu */
+.menu-btn {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    background: linear-gradient(#d9d9d9, #bfbfbf);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.menu-btn:hover {
+    background: linear-gradient(#cfcfcf, #a6a6a6);
+}
+
+/* Contenu */
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+}
+
+/* Footer */
+.footer {
+    background-color: #5d9bd3;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 16px;
+}
+
+/* ===================== */
+/* RESPONSIVE */
+/* ===================== */
+
+/* Tablette */
+@media (max-width: 900px) {
+    .sidebar {
+        width: 180px;
+    }
+
+    .header {
+        font-size: 20px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    body {
+        padding: 0;
+    }
+
+    .main {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .menu-btn {
+        width: 48%;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .content {
+        padding: 15px;
+        min-height: 300px;
+    }
+
+    .header,
+    .footer {
+        font-size: 16px;
+        padding: 18px;
+    }
+}
+
+/* Petit mobile */
+@media (max-width: 400px) {
+    .menu-btn {
+        width: 100%;
+    }
+}

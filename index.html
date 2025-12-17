@@ -2,88 +2,97 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>Git Project</title>
-    <link rel="stylesheet">
-href="style.css"
+    <title>Projet Groupe 4</title>
 
     <style>
+        /* RESET */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Arial, Helvetica, sans-serif;
         }
 
         body {
-            background-color: #f2f2f2;
-            padding: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f2f2f2;
         }
 
-        
         .app {
-            width: 100%;
             max-width: 1100px;
-            margin: auto;
-            background-color: #808080;
-            border: 1px solid #ccc;
+            margin: 20px auto;
+            background: white;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
-            min-height: 600px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
         }
 
-       
         .header {
-            background-color: #FFFF00d3;
-            color: #808080;
+            background: #5d9bd3;
+            color: white;
+            padding: 20px;
             text-align: center;
-            padding: 25px;
             font-size: 22px;
             font-weight: bold;
+            letter-spacing: 1px;
         }
 
-       
         .main {
             flex: 1;
             display: flex;
         }
 
-        
         .sidebar {
             width: 220px;
-            background-color: #FFFF00d3;
+            background: #5d9bd3;
             padding: 20px 10px;
         }
 
+        .sidebar a {
+            text-decoration: none;
+        }
+
         .menu-btn {
+            display: block;
             width: 100%;
-            padding: 15px;
             margin-bottom: 15px;
-            background: linear-gradient(#d9d9d9, #bfbfbf);
+            padding: 12px;
             border: none;
-            border-radius: 4px;
-            font-size: 16px;
+            border-radius: 5px;
             cursor: pointer;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+            font-size: 15px;
+            background: linear-gradient(#e6e6e6, #bfbfbf);
+            transition: all 0.3s ease;
         }
 
         .menu-btn:hover {
             background: linear-gradient(#cfcfcf, #a6a6a6);
+            transform: translateX(5px);
         }
 
-        
         .content {
             flex: 1;
-            background-color: #ffffff;
-            padding: 20px;
+            padding: 30px;
         }
 
-        
+        .content h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .content p {
+            color: #555;
+            line-height: 1.6;
+        }
+
         .footer {
-            background-color: #FFFF00;
-            color: #808080;
+            background: #5d9bd3;
+            color: white;
             text-align: center;
             padding: 15px;
-            font-size: 16px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -92,30 +101,34 @@ href="style.css"
 
 <div class="app">
 
-    <div class="header">
-        GROUPE N°4
-    </div>
+    <div class="header">PROJET GITHUB – GROUPE 4</div>
 
     <div class="main">
 
         <div class="sidebar">
-            <!--MENU 1 remplace-->
-            <a href="NDEBO.HTML">
-            <button class="menu-btn">NDEBO MBASSA</button>
+            <a href="#"><button class="menu-btn">Menu 1</button></a>
+
+            <!-- MENU 2 : TA PART -->
+            <a href="ndebo.html">
+                <button class="menu-btn">NDEBO MBASSA</button>
             </a>
-            <button class="menu-btn">Menu 2</button>
-            <button class="menu-btn">Menu 3</button>
-            <button class="menu-btn">Menu 4</button>
+
+            <a href="#"><button class="menu-btn">Menu 3</button></a>
+            <a href="#"><button class="menu-btn">Menu 4</button></a>
         </div>
 
         <div class="content">
-            
+            <h2>Accueil</h2>
+            <p>
+                Bienvenue sur la page principale du projet GitHub du Groupe 4.
+                Chaque membre dispose d’un menu menant à sa page personnelle.
+            </p>
         </div>
 
     </div>
 
     <div class="footer">
-        Copyright tous droits réservés Groupe N°4
+        © 2025 – Groupe N°4
     </div>
 
 </div>
