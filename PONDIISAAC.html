@@ -2,28 +2,135 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <title>PONDI ISAAC FREEMANN</title>
+    <title>PONDI ISAAC</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    
-    <link rel="stylesheet" href="style.css">
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", Arial, sans-serif;
+        }
+
+        body {
+            background: #f4f6f8;
+            padding: 30px;
+        }
+
+        /* CONTENEUR PRINCIPAL */
+        .container {
+            max-width: 1100px;
+            margin: auto;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* HEADER */
+        .header {
+            background: linear-gradient(135deg, #5d9bd3, #4a87bf);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        .header h1 {
+            font-size: 26px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .header h2 {
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        /* CONTENU */
+        .content {
+            position: relative;
+            min-height: 400px;
+            padding: 40px;
+            background-color: #ffffff;
+        }
+
+        /* MENU */
+        .menu-zone {
+            position: absolute;
+            top: 40px;
+            left: 40px;
+        }
+
+        /* BOUTONS */
+        .btn {
+            display: inline-block;
+            padding: 14px 34px;
+            background: linear-gradient(#d9d9d9, #bfbfbf);
+            color: #333;
+            border-radius: 6px;
+            font-size: 18px;
+            text-decoration: none;
+            box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 14px rgba(0,0,0,0.3);
+            background: linear-gradient(#cfcfcf, #a6a6a6);
+        }
+
+        /* BOUTON RETOUR */
+        .return-zone {
+            position: absolute;
+            bottom: 60px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .btn-large {
+            padding: 16px 55px;
+            font-size: 20px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .menu-zone {
+                position: static;
+                margin-bottom: 30px;
+            }
+
+            .return-zone {
+                position: static;
+                transform: none;
+                margin-top: 40px;
+                text-align: center;
+            }
+
+            .content {
+                text-align: center;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
 <div class="container">
 
-    
+    <!-- HEADER -->
     <header class="header">
-        <div>GROUPE N°4</div>
-        <div class="member-name">PONDI ISAAC FREEMANN</div>
+        <h1>GROUPE N° 4</h1>
+        <h2>PONDI ISAAC FREEMANN NEAL</h2>
     </header>
 
-    
+    <!-- CONTENU -->
     <main class="content">
 
         <div class="menu-zone">
-            <button class="btn">Menu 1</button>
+            <a href="#" class="btn">Menu 1</a>
         </div>
 
         <div class="return-zone">
